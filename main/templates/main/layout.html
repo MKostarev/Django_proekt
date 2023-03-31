@@ -1,0 +1,32 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> {% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <aside>
+        <img src="{% static 'main/img/logo.png' %}" alt="Лого">
+        <span class="logo">Django_test</span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="fa-solid fa-house"></i> Главная</li></a>
+            <a href="{% url 'about' %}"><li><i class="fa-solid fa-address-card"></i> О нас</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-newspaper"></i> Новости </li></a>
+            <a href="{% url 'contacts' %}"><li><i class="fa-solid fa-address-book"></i> Контакты </li></a>
+        </ul>
+    </aside>
+    <main>
+
+    {% block content %}
+    {% endblock %}
+    </main>
+</body>
+</html>
