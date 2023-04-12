@@ -1,6 +1,6 @@
 {% load static %}
 
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -19,8 +19,9 @@
         <ul>
             <a href="{% url 'home' %}"><li><i class="fa-solid fa-house"></i> Главная</li></a>
             <a href="{% url 'about' %}"><li><i class="fa-solid fa-address-card"></i> О нас</li></a>
-            <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-newspaper"></i> Новости </li></a>
+            <a href="{% url 'news' %}"><li><i class="fa-solid fa-newspaper"></i> Новости </li></a>
             <a href="{% url 'contacts' %}"><li><i class="fa-solid fa-address-book"></i> Контакты </li></a>
+            <a href="{% url 'users_reg' %}"><li><i class="fa-solid fa-address-book"></i> Регистрация </li></a>
         </ul>
     </aside>
     <main>
