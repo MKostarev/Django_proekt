@@ -9,6 +9,8 @@ class Articles(models.Model):
     text = models.TextField('Статья')
     date = models.DateTimeField('Дата публикации')
 
+    objects = models.Manager()
+
     def __str__(self):
         return self.title
 

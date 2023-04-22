@@ -5,12 +5,32 @@
 
 
 {% block content %}
-    <h1>Регистрация</h1>
-    <p>Регистрация</p>
+    <h1>Вход</h1>
+    <p>Вход</p>
  <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
-  <input type="submit" value="Создать пользователя">
+
+
+
+     <form action="users_reg/register" method="POST">
+        {% csrf_token %}
+
+         <label for="username">Имя:</label>
+        <input type="text" name="username" id="username">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" id="password">
+        <button type="submit">Регистрация</button>
+    </form>
+
+
+
 </form>
 
+
+
 {% endblock %}
+
+

@@ -1,6 +1,8 @@
 body{
     background: #fcfcfc;
     font-family :Calibri;
+    display: flex;
+    flex-direction: row;
 }
 
 aside {
@@ -9,88 +11,88 @@ aside {
     width: 20%;
     padding: 2.5%;
     height: 100vh;
-    color: #e3f8fc;
     border-right: 5px solid rgba(213, 0, 0, 0.53);
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 aside img {
-    margin-top: 50px;
+
     float: left;
-    width: 250px;
+    width: 100%;
     position: relative;
-    left: -80px;
 }
 
-aside .logo {
+aside .nav_logo {
+    align-self: center;
+}
+
+aside .nav_title {
     color: #ffffff;
     font-size: 30px;
     font-weight: bold;
     position: relative;
-    top: -170px;
-
 
 }
 
 aside h3 {
-    margin-top: -10px;
-    font-size: 28px;
-    color: #ffffff;
 
+    font-size: 18px;
+    color: #ffffff;
 }
 
 h2 {
-    margin-top: -800px;
     font-size: 30px;
-    margin-left: 270px;
-    margin-right: -190px;
-
 }
 
 p {
     color: #000000;
-    margin-left: 270px;
-    margin-right: -190px;
-
 }
+
 button {
     margin-top: 30px;
     font-size: 20px;
-    margin-left: 270px;
-    margin-right: -190px;
-}
-a {
-    margin-top: 30px;
-    font-size: 20px;
-    margin-left: 270px;
-    margin-right: -190px;
 }
 
+a {
+    font-size: 20px;
+    text-decoration: none
+}
+
+
+
 aside ul {
-    list-style: none;
-    margin-top: 20px;
-    text-decoration:none;
-    margin-left: -40px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
 
 }
 
 aside ul li {
     color: #fff;
-    display: block;
-    margin-top: 20px;
     transition: all .6s ease;
     font-size: 20px;
-
-
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    white-space: nowrap;
 }
+
+
+
 
 aside ul li:hover, aside ul a:hover {
     color: black;
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 main .features {
-    float: left;
     color: black;
     text-align: center;
-    width: 75%;
 }
+
+main {
+    width: 80%;
+}
+
